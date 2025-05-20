@@ -19,8 +19,8 @@
     <div class="flex items-center space-x-3">
         <!-- Info User -->
         <div class="hidden md:flex flex-col text-right leading-tight">
-            <span class="font-semibold text-sm text-gray-800">Username</span>
-            <span class="text-xs text-gray-500">Role</span>
+            <span class="font-semibold text-sm text-gray-800">{{ auth()->user()->name }}</span>
+            <span class="text-xs text-gray-500">{{ auth()->user()->role }}</span>
         </div>
 
         <!-- Foto Profil -->

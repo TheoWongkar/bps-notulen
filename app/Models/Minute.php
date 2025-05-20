@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Minutes extends Model
+class Minute extends Model
 {
-    /** @use HasFactory<\Database\Factories\MinutesFactory> */
+    /** @use HasFactory<\Database\Factories\MinuteFactory> */
     use HasFactory;
 
     protected $guarded = ['id'];

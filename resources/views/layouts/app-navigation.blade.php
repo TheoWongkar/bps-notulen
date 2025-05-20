@@ -26,7 +26,7 @@
         <div>
             <h2 class="px-2 text-xs uppercase tracking-wide text-gray-400 mb-2">Menu</h2>
 
-            <a href="#"
+            <a href="{{ route('dashboard') }}"
                 class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('dashboard') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
                 <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor">
@@ -41,7 +41,7 @@
         <div>
             <h2 class="px-2 text-xs uppercase tracking-wide text-gray-400 mb-2">Notulen</h2>
 
-            <a href="#"
+            <a href="{{ route('dashboard.minute.index') }}"
                 class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
                 <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor">
@@ -51,7 +51,7 @@
                 <span>List Notulen</span>
             </a>
 
-            <a href="#"
+            <a href="{{ route('dashboard.minute.create') }}"
                 class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
                 <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="1.5" stroke="currentColor">
