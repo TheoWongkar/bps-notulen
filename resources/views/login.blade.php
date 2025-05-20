@@ -4,7 +4,7 @@
     <x-slot name="title">{{ $title }}</x-slot>
 
     <!-- Bagian Login -->
-    <div class="min-h-screen bg-cover bg-center bg-no-repeat"
+    <section class="min-h-screen bg-cover bg-center bg-no-repeat"
         style="background-image: url('{{ asset('img/hero-img.webp') }}')">
         <div class="flex items-center justify-center min-h-screen bg-blue-950/88 px-4">
             <div class="w-full max-w-sm bg-white/20 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-white/20">
@@ -45,6 +45,6 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
 </x-guest-layout>
