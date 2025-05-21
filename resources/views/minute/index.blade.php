@@ -87,7 +87,7 @@
                     @forelse ($minutes as $minute)
                         <tr class="border-t hover:bg-blue-100 transition duration-200">
                             <td class="py-3 px-2 text-center text-sm">{{ $loop->iteration }}</td>
-                            <td class="py-3 px-2 text-sm">{{ Str::limit($minute->problem, 30) }}</td>
+                            <td class="py-3 px-2 text-sm">{{ strip_tags(Str::limit($minute->problem, 30)) }}</td>
                             <td class="py-3 px-2 text-sm">{{ $minute->user->name }}</td>
                             <td class="py-3 px-2 text-center text-sm">
                                 {{ \Carbon\Carbon::parse($minute->follow_up_limits)->translatedFormat('d M Y') }}

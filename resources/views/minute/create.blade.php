@@ -22,9 +22,9 @@
                 <!-- Masalah -->
                 <div>
                     <label for="problem" class="text-sm font-medium text-black">Masalah</label>
-                    <textarea id="problem" name="problem" rows="4"
-                        class="mt-1 p-2 w-full bg-white text-sm border border-gray-200 rounded-md shadow-sm focus:outline-black"
-                        placeholder="Tuliskan masalah rapat">{{ old('problem') }}</textarea>
+                    <input id="problem" type="hidden" name="problem">
+                    <trix-editor input="problem"
+                        aria-placeholder="Tuliskan masalah rapat">{{ old('problem') }}</trix-editor>
                     @error('problem')
                         <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                     @enderror
@@ -33,9 +33,9 @@
                 <!-- Solusi -->
                 <div>
                     <label for="solution" class="text-sm font-medium text-black">Solusi</label>
-                    <textarea id="solution" name="solution" rows="4"
-                        class="mt-1 p-2 w-full bg-white text-sm border border-gray-200 rounded-md shadow-sm focus:outline-black"
-                        placeholder="Tuliskan solusi rapat">{{ old('solution') }}</textarea>
+                    <input id="solution" type="hidden" name="solution">
+                    <trix-editor input="solution"
+                        aria-placeholder="Tuliskan masalah rapat">{{ old('solution') }}</trix-editor>
                     @error('solution')
                         <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                     @enderror
@@ -44,9 +44,9 @@
                 <!-- Rencana Tindak Lanjut -->
                 <div>
                     <label for="follow_up_plan" class="text-sm font-medium text-black">Rencana Tindak Lanjut</label>
-                    <textarea id="follow_up_plan" name="follow_up_plan" rows="4"
-                        class="mt-1 p-2 w-full bg-white text-sm border border-gray-200 rounded-md shadow-sm focus:outline-black"
-                        placeholder="Tuliskan solusi rapat">{{ old('follow_up_plan') }}</textarea>
+                    <input id="follow_up_plan" type="hidden" name="follow_up_plan">
+                    <trix-editor input="follow_up_plan"
+                        aria-placeholder="Tuliskan masalah rapat">{{ old('follow_up_plan') }}</trix-editor>
                     @error('follow_up_plan')
                         <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                     @enderror
@@ -55,9 +55,9 @@
                 <!-- Sumber Data -->
                 <div>
                     <label for="data_source" class="text-sm font-medium text-black">Sumber Data</label>
-                    <textarea id="data_source" name="data_source" rows="4"
-                        class="mt-1 p-2 w-full bg-white text-sm border border-gray-200 rounded-md shadow-sm focus:outline-black"
-                        placeholder="Tuliskan solusi rapat">{{ old('data_source') }}</textarea>
+                    <input id="data_source" type="hidden" name="data_source">
+                    <trix-editor input="data_source"
+                        aria-placeholder="Tuliskan masalah rapat">{{ old('data_source') }}</trix-editor>
                     @error('data_source')
                         <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
                     @enderror

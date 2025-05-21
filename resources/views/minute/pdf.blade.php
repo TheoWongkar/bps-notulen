@@ -97,12 +97,12 @@
     <!-- Bagian Atas -->
     <div class="section">
         <h1>Masalah</h1>
-        <p>{{ $minute->problem }}</p>
+        <p>{!! $minute->problem !!}</p>
 
         <br>
 
         <h1>Solusi</h1>
-        <p>{{ $minute->solution }}</p>
+        <p>{!! $minute->solution !!}</p>
     </div>
 
     <!-- Bagian Tengah -->
@@ -111,7 +111,7 @@
             <tr>
                 <td width="50%" valign="top">
                     <h2>Ditindak Lanjuti Oleh</h2>
-                    {{ $minute->user->name }}<br>
+                    {!! $minute->user->name !!}<br>
                 </td>
                 <td width="50%" valign="top">
                     <h2>Batas Tindak Lanjut</h2>
@@ -124,12 +124,12 @@
     <!-- Bagian Bawah -->
     <div class="section">
         <h2>Rencana Tindak Lanjut</h2>
-        <p>{{ $minute->follow_up_plan }}</p>
+        <p>{!! $minute->follow_up_plan !!}</p>
 
         <br>
 
         <h2>Sumber Data</h2>
-        <p>{{ $minute->data_source }}</p>
+        <p>{!! $minute->data_source !!}</p>
     </div>
 
     <!-- Tempat Tanda Tangan -->
