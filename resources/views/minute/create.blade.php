@@ -65,7 +65,7 @@
 
                 <!-- Bukti Tindak Lanjut -->
                 <div x-data="{ imagePreview: null }">
-                    <label for="evidence" class="text-sm font-medium text-black">Bukti Tindak Lanjut</label>
+                    <label for="evidence" class="text-sm font-medium text-black">File Lampiran</label>
                     <input id="evidence" type="file" name="evidence" accept="image/jpeg, image/png"
                         class="mt-1 w-full border border-gray-200 rounded-md shadow-sm focus:outline-black file:mr-4 file:py-2 file:px-4 file:text-sm file:bg-gray-700 file:text-white hover:file:bg-gray-800"
                         @change="imagePreview = $event.target.files.length ? URL.createObjectURL($event.target.files[0]) : null">
