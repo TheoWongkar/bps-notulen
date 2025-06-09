@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,6 +14,10 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
+        if (! Gate::allows('crud-user')) {
+            abort(403);
+        }
+
         // Validasi Search Form
         $validated = $request->validate([
             'status' => 'nullable|string|in:Arsip,Terbit,all',
@@ -50,6 +55,10 @@ class UserController extends Controller
 
     public function create()
     {
+        if (! Gate::allows('crud-user')) {
+            abort(403);
+        }
+
         $title = "Tambah Pengguna";
 
         return view('user.create', compact('title'));
@@ -86,6 +95,10 @@ class UserController extends Controller
 
     public function edit(string $id)
     {
+        if (! Gate::allows('crud-user')) {
+            abort(403);
+        }
+
         $user = User::findOrFail($id);
 
         $title = "Tambah Pengguna";
@@ -131,6 +144,10 @@ class UserController extends Controller
 
     public function destroy(string $id)
     {
+        if (! Gate::allows('crud-user')) {
+            abort(403);
+        }
+
         $user = User::findOrFail($id);
 
         $user->delete();

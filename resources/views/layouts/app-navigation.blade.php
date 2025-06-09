@@ -63,29 +63,31 @@
         </div>
 
         <!-- Notulen -->
-        <div>
-            <h2 class="px-2 text-xs uppercase tracking-wide text-gray-400 mb-2">Data Pengguna</h2>
+        @can('crud-user')
+            <div>
+                <h2 class="px-2 text-xs uppercase tracking-wide text-gray-400 mb-2">Data Pengguna</h2>
 
-            <a href="{{ route('dashboard.user.index') }}"
-                class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
-                <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                </svg>
-                <span>List Pengguna</span>
-            </a>
+                <a href="{{ route('dashboard.user.index') }}"
+                    class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
+                    <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                    </svg>
+                    <span>List Pengguna</span>
+                </a>
 
-            <a href="{{ route('dashboard.user.create') }}"
-                class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
-                <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                </svg>
-                <span>Tambah Pengguna</span>
-            </a>
-        </div>
+                <a href="{{ route('dashboard.user.create') }}"
+                    class="flex items-center gap-3 px-4 py-2 rounded-lg transition hover:bg-white/10 {{ Request::routeIs('#') ? 'bg-white/10 text-white font-semibold' : 'text-white/80' }}">
+                    <svg class="w-6 h-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                    </svg>
+                    <span>Tambah Pengguna</span>
+                </a>
+            </div>
+        @endcan
 
         <!-- Lainnya -->
         <div>
